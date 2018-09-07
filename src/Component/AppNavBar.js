@@ -1,4 +1,5 @@
 import React from "react";
+import {Link, NavLink} from 'react-router-dom'
 // npm install react-router-dom
 const AppNavBar = () => {
   return (
@@ -6,15 +7,9 @@ const AppNavBar = () => {
       <div className="container">
         <a className="brand-logo left">Router Post</a>
         <ul className="right">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
       </div>
     </nav>

@@ -9,12 +9,15 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return (
+    return ( 
       <BrowserRouter>
         <div className="App">
           <AppNavBar />
 
           <Route exact path="/" component={Home} />
+         { /*
+        extent path no show home commponent in other router component
+         */}
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </div>
