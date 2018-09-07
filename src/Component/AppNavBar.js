@@ -1,6 +1,7 @@
 import React from "react";
 import {Link, NavLink, withRouter} from 'react-router-dom'
 // npm install react-router-dom
+const AppNavBar = () => {
 // const AppNavBar = (props) => {
 //   setTimeout(() => {
 //   props.history.push('/about');
