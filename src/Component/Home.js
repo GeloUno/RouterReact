@@ -1,4 +1,5 @@
 import React from "react";
+import Rainbow from '../HigherOtherComponent/Rainbow'
 
 const Home = () => {
   return (
@@ -13,4 +14,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Rainbow(Home);
