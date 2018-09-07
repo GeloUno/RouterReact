@@ -1,7 +1,12 @@
 import React from "react";
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink, withRouter} from 'react-router-dom'
 // npm install react-router-dom
-const AppNavBar = () => {
+// const AppNavBar = (props) => {
+//   setTimeout(() => {
+//   props.history.push('/about');
+//   console.log(props);
+  
+// },3000);
   return (
     <nav className="nav-wrapper blue">
       <div className="container">
@@ -21,4 +26,4 @@ const AppNavBar = () => {
     </nav>
   );
 };
-export default AppNavBar;
+export default withRouter(AppNavBar);
