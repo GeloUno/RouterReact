@@ -17,6 +17,9 @@ const AppNavBar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
+            <NavLink to="/post">Post</NavLink>
+       </li>
+          <li>
             <NavLink to="/contact">Contact</NavLink>
        </li>
           <li>

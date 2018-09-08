@@ -5,7 +5,7 @@ const Rainbow = (Wraapped) => {
     const colorS = ['red', 'blue', 'black', 'pink', 'green','purple','amber','teal','cyan','grey','brown'];
     const randomColor = colorS[Math.floor(Math.random() * colorS.length)];
     const classColor = [randomColor + '-text'];
-    console.log(classColor);
+  //  console.log(classColor);
     
   return (props)=> {
       return(

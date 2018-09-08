@@ -1,0 +1,45 @@
+import React, { Component } from "react";
+import './Post.css'
+import axio from "axios";
+
+class Post extends Component {
+  pages; 
+  // TODO: now it is posts length it will be used for pagination
+  state = {
+    posts: []
+  };
+  componentDidMount() {
+    axio.get("https://jsonplaceholder.typicode.com/posts").then(post => {
+      
+      this.pages = post.data.length;     
+      this.setState({
+        posts: post.data.slice(0, 10)
+      });     
+    });
+  }
+  render() {
+    const { posts } = this.state;
+    const postList = posts.length ? (
+      posts.map(post => {
+        return (
+          <div className="card center" key={post.id}>
+            <div className="card-title">{post.title}</div>
+            <div className="postBody">{post.body.slice(0,100)}
+            <span className="grey-text text-darken-1">  ...more</span>
+            </div>
+          </div>
+        );
+      })
+    ) : (
+      <div className="center">Loadinng ..</div>
+    );
+    return (
+      <div>
+        <div className="container">
+          <div className="center">{postList}</div>
+        </div>
+      </div>
+    );
+  }
+}
+export default Post;

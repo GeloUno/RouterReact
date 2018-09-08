@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Home from "../src/Component/Home";
 import AppNavBar from "../src/Component/AppNavBar";
 import About from "../src/Component/About";
+import Post from '../src/Component/Post'
 import Contact from "../src/Component/Contact";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -19,6 +20,7 @@ class App extends Component {
         extent path no show home commponent in other router component
          */}
           <Route path="/about" component={About} />
+          <Route path='/post' component={Post} />
           <Route path="/contact" component={Contact} />
         </div>
       </BrowserRouter>

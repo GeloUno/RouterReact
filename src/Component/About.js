@@ -2,9 +2,9 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="containner">
+    <div className="containner">   
       <h3 className="center">About</h3>
-      <p>
+      <p className="card card-content">
         Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała
         zawartość strony, kiedy ten chce zobaczyć sam jej wygląd. Jedną z
         mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych
@@ -15,7 +15,7 @@ const Home = () => {
         spowoduje znalezienie bardzo wielu stron, które wciąż są w budowie.
         Wiele wersji tekstu ewoluowało i zmieniało się przez lata, czasem przez
         przypadek, czasem specjalnie (humorystyczne wstawki itd).
-      </p>
+      </p>     
     </div>
   );
 };

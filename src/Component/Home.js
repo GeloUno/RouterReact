@@ -1,7 +1,7 @@
 import React from "react";
 import Rainbow from '../HigherOtherComponent/Rainbow'
 
-const Home = () => {
+const Home = () => { 
   return (
     <div className="containner">
       <h3 className="center">Home</h3>
