@@ -1,3 +1,11 @@
-div span{
-  cursor: pointer;  
+.cards{
+  margin: 30px 0px;
+ padding: 10px 0px;
+ 
+  
+}
+.postBody, .card-title{
+  cursor: pointer; 
+ text-decoration: none;
+  color: black;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, NavLink, withRouter} from 'react-router-dom'
+import {Link, NavLink, withRouter,Switch} from 'react-router-dom'
 // npm install react-router-dom
 const AppNavBar = () => {
 // const AppNavBar = (props) => {
@@ -13,18 +13,20 @@ const AppNavBar = () => {
       <div className="container">
         <a className="brand-logo left">Router Post</a>
         <ul className="right">
-          <li>
+         
+          <li>         
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/post">Post</NavLink>
-       </li>
+            <NavLink to="/posts">Posts</NavLink>
+       </li>         
           <li>
             <NavLink to="/contact">Contact</NavLink>
        </li>
           <li>
             <NavLink to="/about">About</NavLink>
        </li>
+      
         </ul>
       </div>
     </nav>
