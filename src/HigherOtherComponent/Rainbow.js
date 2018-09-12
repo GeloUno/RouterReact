@@ -34,9 +34,11 @@ const Rainbow = Wraapped => {
             strength={300}>           
             <div style={{height:400}}>
          {/*   <div style={insideStyles}>HTML inside the parallax</div> */}
-          </div>
+          
+         </div>
           </Parallax>
            {/*  </>
+            
         </div>*/}
         <Wraapped {...props} />
       </div>
