@@ -25,7 +25,7 @@ class Posts extends Component {
         return (
           <div className="card center cards" key={post.id}>
             <Link to={'post/'+ post.id}>
-            <div className="card-title">{post.title}</div>
+            <div className="card-title">{post.id}. {post.title}</div>
             <div className="postBody">{post.body.slice(0,100)}
             <span className="grey-text text-darken-1">  ...more</span>
             </div>
@@ -34,8 +34,9 @@ class Posts extends Component {
         );
       })
     ) : (
-      <div className="center">Loadinng ..</div>
-    );
+      
+      <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      );
     return (
       <div>
         <div className="container">
