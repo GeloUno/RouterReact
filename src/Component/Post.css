@@ -9,7 +9,7 @@
  text-decoration: none;
   color: black;
 }
-
+/* progress bar circle start */
 .lds-spinner {
   color: official;
   display: inline-block;
@@ -87,4 +87,9 @@
   100% {
     opacity: 0;
   }
+}
+/* progress bar circle end */
+
+.padding1{
+  padding: 100px;
 }

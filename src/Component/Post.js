@@ -18,19 +18,19 @@ class Post extends Component {
   }
   render() {
       const post = this.state.post.id ? (
-        <div className="container">
+        
         <div className="card center cards" key= {this.state.post.id}>
 <div className="card-title">{this.state.post.id}. {this.state.post.title}</div>
 <div className="postBody">{this.state.post.body}</div>
-</div></div>
+</div>
         ):(            
-            <div className="center">
+            <div className="padding1">
           <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           </div>
           )
     return (
-      <div >        
-       <div >{post}</div>
+      <div className="container">        
+       <div className="center">{post}</div>
       </div>
     );
   }

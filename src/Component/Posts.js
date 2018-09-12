@@ -34,8 +34,9 @@ class Posts extends Component {
         );
       })
     ) : (
-      
+     <div className="padding1">
       <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+     </div>
       );
     return (
       <div>
