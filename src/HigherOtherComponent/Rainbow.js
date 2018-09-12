@@ -1,21 +1,46 @@
 import React from "react";
+import {Parallax, Background} from 'react-parallax'
 
-const Rainbow = (Wraapped) => {
+//const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 
-    const colorS = ['red', 'blue', 'black', 'pink', 'green','purple','amber','teal','cyan','grey','brown'];
-    const randomColor = colorS[Math.floor(Math.random() * colorS.length)];
-    const classColor = [randomColor + '-text'];
+
+const Rainbow = Wraapped => {
+  const colorS = [
+    "red",
+    "blue",
+    "black",
+    "pink",
+    "green",
+    "purple",
+    "amber",
+    "teal",
+    "cyan",
+    "grey",
+    "brown"
+  ];
+  const randomColor = colorS[Math.floor(Math.random() * colorS.length)];
+  const classColor = [randomColor + "-text"];
   //  console.log(classColor);
-    
-  return (props)=> {
-      return(
-          
-        <div className={classColor}>
-          <div><h4 className="center black-text">Wrap Higer Other Component</h4></div>
-      <Wraapped {...props} />
-    </div>)
-    
-      }
 
+  return props => {
+    return (
+      <div className={classColor}>
+       {/* <div class="parallax-container">
+    <div class="parallax">*/}
+    <Parallax
+    blur ={0}
+            bgImage={require("../assets/reconnoiter-60779.jpg")}
+            bgImageAlt = "Szukaj"
+            strength={300}>           
+            <div style={{height:400}}>
+         {/*   <div style={insideStyles}>HTML inside the parallax</div> */}
+          </div>
+          </Parallax>
+           {/*  </>
+        </div>*/}
+        <Wraapped {...props} />
+      </div>
+    );
+  };
 };
-export default Rainbow
+export default Rainbow;
