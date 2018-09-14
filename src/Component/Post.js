@@ -1,43 +1,36 @@
 import React, { Component } from "react";
-import './Post.css'
 import axio from "axios";
+import './Post.css'
 
 class Post extends Component {
-  pages; 
-  // TODO: now it is posts length it will be used for pagination
   state = {
-    posts: []
+    post: []
   };
   componentDidMount() {
-    axio.get("https://jsonplaceholder.typicode.com/posts").then(post => {
+    let id = this.props.match.params.post_id;
+    // https://jsonplaceholder.typicode.com/posts/1
+    axio.get("https://jsonplaceholder.typicode.com/posts/"+id).then(postD => {
+      this.setState(({post: postD.data}));
+      console.log(postD.data);
       
-      this.pages = post.data.length;     
-      this.setState({
-        posts: post.data.slice(0, 10)
-      });     
     });
+      console.log(id);
   }
   render() {
-    const { posts } = this.state;
-    const postList = posts.length ? (
-      posts.map(post => {
-        return (
-          <div className="card center" key={post.id}>
-            <div className="card-title">{post.title}</div>
-            <div className="postBody">{post.body.slice(0,100)}
-            <span className="grey-text text-darken-1">  ...more</span>
-            </div>
+      const post = this.state.post.id ? (
+        
+        <div className="card center cards" key= {this.state.post.id}>
+<div className="card-title">{this.state.post.id}. {this.state.post.title}</div>
+<div className="postBody">{this.state.post.body}</div>
+</div>
+        ):(            
+            <div className="padding1">
+          <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           </div>
-        );
-      })
-    ) : (
-      <div className="center">Loadinng ..</div>
-    );
+          )
     return (
-      <div>
-        <div className="container">
-          <div className="center">{postList}</div>
-        </div>
+      <div className="container">        
+       <div className="center">{post}</div>
       </div>
     );
   }
