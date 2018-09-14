@@ -1,7 +1,17 @@
 import React from "react";
 import {Parallax, Background} from 'react-parallax'
 
-//const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+const insideStyles = {  
+  padding: 20, 
+  color:'white',
+   fontSize:'35px', 
+   fontWeight:'900',
+    position: 'absolute',
+    textAlign: 'center',
+     top: '20%',
+      left: '60%',      
+        transform: 'translate(0%,0%)'
+      };
 
 
 const Rainbow = Wraapped => {
@@ -24,22 +34,18 @@ const Rainbow = Wraapped => {
 
   return props => {
     return (
-      <div className={classColor}>
-       {/* <div class="parallax-container">
-    <div class="parallax">*/}
+      <div className={classColor}>       
     <Parallax
     blur ={0}
             bgImage={require("../assets/reconnoiter-60779.jpg")}
             bgImageAlt = "Szukaj"
-            strength={300}>           
+            strength={400}>           
             <div style={{height:400}}>
-         {/*   <div style={insideStyles}>HTML inside the parallax</div> */}
-          
+          {
+            /* <div style={insideStyles}><div className='center'> Szukasz</div><div> Frontend Developera</div></div>
+          */}
          </div>
-          </Parallax>
-           {/*  </>
-            
-        </div>*/}
+          </Parallax>          
         <Wraapped {...props} />
       </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Post.css'
+//import './Post.css'
 import axio from "axios";
 import {Link} from 'react-router-dom'
 
