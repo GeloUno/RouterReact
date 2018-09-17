@@ -7,11 +7,7 @@
     "material-design-icons": "^3.0.1",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-<<<<<<< HEAD
     "react-parallax": "^2.0.0",
-=======
-    "react-parallax": "^1.8.0",
->>>>>>> 1c1f8c1b4420f00da6b2a50df9722308bc706530
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
