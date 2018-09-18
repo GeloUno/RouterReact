@@ -1,28 +1,24 @@
-import React, { Component } from "react";
-import Rainbow from "../HigherOtherComponent/Rainbow";
-import "../Component/Home.css";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import Rainbow from '../HigherOtherComponent/Rainbow';
+import '../Component/Home.css';
+import { NavLink } from 'react-router-dom';
 
 class Home extends Component {
- 
   componentDidMount() {
-    window.addEventListener("scroll", this._scrollevent);
+    window.addEventListener('scroll', this._scrollevent);
   }
   _scrollevent(event) {
-    let btnJoinHiden = document.getElementsByClassName("btnJoinHover");
-    console.log(event.path["1"].scrollY);
-    if (event.path["1"].scrollY > 1000) {
-      console.log("wiecej");
-      console.log(btnJoinHiden);
-      btnJoinHiden[0].disabled = false;   
-      btnJoinHiden[0].style.display = 'block';   
-     
-    } else {
-      console.log("mniej");      
-      btnJoinHiden[0].disabled = true;
-      btnJoinHiden[0].style.display = 'none';   
-     
+    var btnJoinHiden = document.querySelector('.btnJoinHover');
+     if(btnJoinHiden!==null){
+      if (event.path['1'].scrollY >(document.body.scrollHeight-1000)) {      
+        btnJoinHiden.style.display = 'block';
+      } else {           
+          btnJoinHiden.style.display = 'none';       
+      }
     }
+  }
+  setScrollZero(){
+    window.scrollTo(0,0);
   }
   render() {
     return (
@@ -38,7 +34,7 @@ class Home extends Component {
                       <div className="col s6 m3 l3 offset-l1 offset-m1 offset-s3 ">
                         <div className="card-image">
                           <img
-                            src={require("../assets/Angular_full_color_logo.svg.png")}
+                            src={require('../assets/Angular_full_color_logo.svg.png')}
                             className="responsive-img"
                             alt="Angular"
                           />
@@ -73,7 +69,7 @@ class Home extends Component {
                       <div className="col s6 m3 l3 push-l7 offset-m1 offset-s3 ">
                         <div className="card-image ">
                           <img
-                            src={require("../assets/640px-React-icon.svg.png")}
+                            src={require('../assets/640px-React-icon.svg.png')}
                             className="responsive-img"
                             alt="Angular"
                           />
@@ -103,11 +99,11 @@ class Home extends Component {
           </div>
         </div>
         <section className="se1">
-         <NavLink to="posts" className>
-            <button className="btn waves-effect waves-light btnJoinHover red">
+          <NavLink to="posts"> 
+            <button onClick={this.setScrollZero} className="btn waves-effect pulse waves-light btnJoinHover red">
               ZAPRASZAM
             </button>
-         </NavLink>
+          </NavLink>
         </section>
       </div>
     );
