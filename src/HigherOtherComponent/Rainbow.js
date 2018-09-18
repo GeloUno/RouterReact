@@ -34,19 +34,23 @@ const Rainbow = Wraapped => {
 
   return props => {
     return (
-      <div className={classColor}>       
+      <div>
+    {/*  <div className={classColor}>  */}     
     <Parallax
     blur ={0}
-            bgImage={require("../assets/reconnoiter-60779.jpg")}
+            bgImage={require("../assets/businessman-watching-through-binoculars_53419-6068.jpg")}
             bgImageAlt = "Szukaj"
-            strength={400}>           
+            strength={400}
+           
+            >           
             <div style={{height:400}}>
           {
             /* <div style={insideStyles}><div className='center'> Szukasz</div><div> Frontend Developera</div></div>
           */}
          </div>
-          </Parallax>          
+          </Parallax>   
         <Wraapped {...props} />
+       
       </div>
     );
   };
