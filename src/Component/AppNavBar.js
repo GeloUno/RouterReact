@@ -24,13 +24,14 @@ class AppNavBar extends Component {
   render() {
    
     let menuHamburgerActive = this.state.isVisibility ? (
-       <div>
-      <ul className="blue">
-        <li> <NavLink to="/">Home</NavLink></li>
-        <li> <NavLink to="/posts">Post</NavLink></li>
-        <li> <NavLink to="/contact">Contact</NavLink></li>
-        <li> <NavLink to="/about">About</NavLink></li>
-      </ul>     
+      
+      <div>
+      <ul className="openUL" >
+        <li className="blue openLI"> <NavLink to="/">Home</NavLink></li>
+        <li className="blue openLI"> <NavLink to="/posts">Post</NavLink></li>
+        <li className="blue openLI"> <NavLink to="/contact">Contact</NavLink></li>
+        <li className="blue openLI"> <NavLink to="/about">About</NavLink></li>
+      </ ul>     
        </div>
       
     ) : (
@@ -62,9 +63,7 @@ class AppNavBar extends Component {
             <i className="material-icons">
               menu
             </i>
-{
             <div className="hide-on-med-and-up right HamburgerActive">{menuHamburgerActive}</div>
-}
             </div>
         </div>
       </nav>
