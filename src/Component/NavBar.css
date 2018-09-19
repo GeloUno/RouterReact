@@ -1,3 +1,21 @@
-li{
-    text-transform: uppercase;
+li {
+  text-transform: uppercase;
+}
+.openUL {
+  display: grid;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 40;    
+  animation: openAnim .5s ease-in-out;
+  margin-top: 1px;
+  transform: translateX(10px)
+}
+.openLI {
+  margin-bottom: 2px;  
+  border-radius: 10px;
+}
+@keyframes openAnim{
+  from {transform: translateX(-100px);}
+  to {transform: translateX(10px);};
 }
