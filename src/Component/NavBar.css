@@ -1,3 +1,28 @@
-li{
-    text-transform: uppercase;
+li {
+  text-transform: uppercase;
 }
+.HamburgerActive div,
+.HamburgerActive div ul {
+  display: grid;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 40;
+  transition: 1s;
+}
+
+li + li {
+  border-top: 1px solid grey;
+}
+
+/* .sidenav{
+position: absolute;
+z-index: 8;
+left: 0;
+top: 10;
+}
+.HamburgerActive div{
+    display: block;
+    position: absolute;
+z-index: 11;
+} */
