@@ -1,5 +1,6 @@
 import React from "react";
 import {Parallax, Background} from 'react-parallax'
+import logoShearchPeople from "../assets/businessman-watching-through-binoculars_53419-6068.jpg"
 
 const insideStyles = {  
   padding: 20, 
@@ -38,7 +39,7 @@ const Rainbow = Wraapped => {
     {/*  <div className={classColor}>  */}     
     <Parallax
     blur ={0}
-            bgImage={require("../assets/businessman-watching-through-binoculars_53419-6068.jpg")}
+            bgImage={logoShearchPeople}
             bgImageAlt = "Szukaj"
             strength={400}
            

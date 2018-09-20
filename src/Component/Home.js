@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Rainbow from '../HigherOtherComponent/Rainbow';
 import '../Component/Home.css';
 import { NavLink } from 'react-router-dom';
+import logoReact from '../assets/640px-React-icon.svg.png';
+import logoAngular from '../assets/Angular_full_color_logo.svg.png';
 
 class Home extends Component {
   componentDidMount() {
@@ -9,7 +11,9 @@ class Home extends Component {
   }
   _scrollevent(event) {
     var btnJoinHiden = document.querySelector('.btnJoinHover');
-     if(btnJoinHiden!==null){
+   // console.log(event);
+    //FIXME: event not works with FF EDGE IE
+     if(btnJoinHiden!==null&&(typeof event.path!== 'undefined')){
       if (event.path['1'].scrollY >(document.body.scrollHeight-1000)) {      
         btnJoinHiden.style.display = 'block';
       } else {           
@@ -34,7 +38,7 @@ class Home extends Component {
                       <div className="col s6 m3 l3 offset-l1 offset-m1 offset-s3 ">
                         <div className="card-image">
                           <img
-                            src={require('../assets/Angular_full_color_logo.svg.png')}
+                            src={logoAngular}
                             className="responsive-img"
                             alt="Angular"
                           />
@@ -69,7 +73,7 @@ class Home extends Component {
                       <div className="col s6 m3 l3 push-l7 offset-m1 offset-s3 ">
                         <div className="card-image ">
                           <img
-                            src={require('../assets/640px-React-icon.svg.png')}
+                            src={logoReact}
                             className="responsive-img"
                             alt="Angular"
                           />
@@ -110,5 +114,4 @@ class Home extends Component {
   }
 }
 export default Rainbow(Home);
-
 
