@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink, withRouter, Switch } from "react-router-dom";
-import "../Component/NavBar.css";
+import "../Component/AppNavBar.css";
 // npm install react-router-dom
 class AppNavBar extends Component {
   constructor(props) {
@@ -46,13 +46,13 @@ class AppNavBar extends Component {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/posts">Post</NavLink>
+              <NavLink to="/posts">Projects</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">About Me</NavLink>
             </li>
           </ul>
 

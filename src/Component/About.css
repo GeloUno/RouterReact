@@ -1,0 +1,21 @@
+.containerAbout{
+    /* margin-top: 100px; */
+    display: grid;
+}
+.card-titleAbout{
+margin-top: 100px;
+padding-top: 100px;
+}
+.logoCard{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: 5%;
+}
+.card-containerAbout{
+    padding-bottom: 15px;
+}
+.mapGoogle{
+    height: 31rem;
+}
