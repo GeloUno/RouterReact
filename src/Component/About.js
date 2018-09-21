@@ -3,7 +3,8 @@ import "../Component/About.css"
 import mePhoto from'../assets/112.png'
 import studyLogo from'../assets/PolLub.png'
 import e3dPrinting from'../assets/3DPrinting.png'
-import logoGoogleMaps from '../assets/location2.png';
+import logoGoogleMaps from '../assets/location1.png';
+import logoGitHub from '../assets/Octocat.png';
 
 export default class About extends Component {
   render() {
@@ -54,15 +55,12 @@ export default class About extends Component {
         }
         </div>
 </div>
-<div className="card z-depth-3">
-      <div className="card-title card-titleAbout">Knowledge</div>
+<div className="card z-depth-3 cardGitHub">
+      <div className="card-title card-titleAbout">GitHub</div>
       <div className="card-container card-containerAbout">
-      <p>Uniwesyty of Technology</p>
-      <p>Informatics</p>
-      <p>Engineer</p>
-      <p>2015-2019</p>
+      <p>github.com/GeloUno</p>      
       </div>
-      <img className="logoCard" src={studyLogo} alt="Uniwesyty of technology"/>
+      <img className="logoCard" src={logoGitHub} alt="GitHub"/>
      </div>
       </div>
 
