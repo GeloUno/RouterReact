@@ -5,8 +5,22 @@ import studyLogo from'../assets/PolLub.png'
 import e3dPrinting from'../assets/3DPrinting.png'
 import logoGoogleMaps from '../assets/location1.png';
 import logoGitHub from '../assets/Octocat.png';
+import GoogleMapReact from 'google-map-react';
 
+const AnyReactComponent = ({ text }) => (
+ <div>
+  <i className="fas fa-map-marker-alt">i</i>   
+  </div>
+);
 export default class About extends Component {
+  static defaultProps = {
+    center: {
+      lat: 51.173,
+      lng: 22.277
+    },
+    zoom: 10
+  };
+  
   render() {
     return (
       <div>
@@ -16,10 +30,10 @@ export default class About extends Component {
       <div className="col s12 m12 l6">
       <div className="card z-depth-3">
       <img className="logoCard" src={mePhoto} alt="Grzegorz Photo"/>
-      <div className="card-title card-titleAbout">Grzegorz K******a</div>
+      <div className="card-title card-titleAbout">Grzegorz Kędziora</div>
       <div className="card-container card-containerAbout">    
     
-     <div><p>g***********m</p></div>
+     <div><p>ge.kedziora@gmail.com</p> <i className="fas fa-map-marker-alt"></i>   </div>
       </div>
       </div>
       <div className="card z-depth-3">
@@ -47,10 +61,22 @@ export default class About extends Component {
       <div className="col s12 m12 l6">
  <div className="card z-depth-3">
       <div className="card-title card-titleAbout">Location</div>
-      <div className="card-container card-containerAbout">
-      <div className="mapGoogle">mapa googla</div>    
+      <div className="card-container card-containerAbout">      
        <img className="logoCard" src={logoGoogleMaps} alt="logoGoogleMaps"/>
-     
+       <div style={{ height: '59vh', width: '100%', paddingLeft:'15px', paddingRight:'15px' }}>
+       <GoogleMapReact
+         bootstrapURLKeys={{ key:"AIzaSyD3P1dooTvHi0ogRWI6VQv0SmltETBCW-4" }}
+         defaultCenter={this.props.center}
+         defaultZoom={this.props.zoom}
+       >
+       <AnyReactComponent 
+          lat={this.props.center.lat} 
+          lng={this.props.center.lng} 
+          text={'Home'} 
+        />
+         
+       </GoogleMapReact>
+     </div>
       {// TODO: add google maps
         }
         </div>
