@@ -8,16 +8,17 @@ import logoGitHub from '../assets/Octocat.png';
 import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = () => (
-  <div style={{ width: '0',
-    height: '0',
-    borderLeft: '15px solid transparent',
-    borderRight: '15px solid transparent',
-    borderTop: '30px solid red',    
-    borderRadius: '50%',
-    transform:'translate(-50%,-100%)'
-    ,}}>
-    
-  </div>
+  <div
+    style={{
+      width: '0',
+      height: '0',
+      borderLeft: '15px solid transparent',
+      borderRight: '15px solid transparent',
+      borderTop: '30px solid red',
+      borderRadius: '50%',
+      transform: 'translate(-50%,-100%)'
+    }}
+  />
 );
 export default class About extends Component {
   static defaultProps = {
@@ -90,8 +91,9 @@ export default class About extends Component {
                     />
                     <div
                       style={{
-                        height: '59vh',
+                        height: '76vh',
                         width: '100%',
+                        paddingTop: '15px',
                         paddingLeft: '15px',
                         paddingRight: '15px'
                       }}
@@ -106,7 +108,6 @@ export default class About extends Component {
                         <AnyReactComponent
                           lat={this.props.center.lat}
                           lng={this.props.center.lng}
-                         
                         />
                       </GoogleMapReact>
                     </div>
