@@ -12,13 +12,14 @@ const AnyReactComponent = () => (
     style={{
       width: '0',
       height: '0',
-      borderLeft: '15px solid transparent',
-      borderRight: '15px solid transparent',
+      borderLeft: '20px solid transparent',
+      borderRight: '20px solid transparent',
       borderTop: '30px solid red',
       borderRadius: '50%',
       transform: 'translate(-50%,-100%)'
-    }}
-  />
+    }}  
+  >
+  <img src={mePhoto} style={{width:'31px', height:'31px', transform:'translate(-50%,-160%'}}></img></div>
 );
 export default class About extends Component {
   static defaultProps = {
