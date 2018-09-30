@@ -6,7 +6,7 @@ import Posts from './Component/Posts'
 import Post from './Component/Post'
 import Contact from "../src/Component/Contact";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import MyMapGoogle from '../src/HigherOtherComponent/MyMapGoogle'
 import "./App.css";
 
 class App extends Component {
