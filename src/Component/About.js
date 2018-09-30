@@ -19,7 +19,7 @@ const AnyReactComponent = () => (
       transform: 'translate(-50%,-100%)'
     }}  
   >
-  <img src={mePhoto} style={{width:'31px', height:'31px', transform:'translate(-50%,-160%'}}></img></div>
+  <img src={mePhoto} style={{width:'45px', height:'45px', transform:'translate(-50%,-140%'}}></img></div>
 );
 export default class About extends Component {
   static defaultProps = {
@@ -27,7 +27,7 @@ export default class About extends Component {
       lat: 51.173,
       lng: 22.277
     },
-    zoom: 10
+    zoom: 9
   };
 
   render() {
