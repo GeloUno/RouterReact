@@ -56,4 +56,4 @@ const Rainbow = Wraapped => {
     );
   };
 };
-export default Rainbow;
+export default  Rainbow;

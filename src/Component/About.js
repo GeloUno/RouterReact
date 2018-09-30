@@ -6,7 +6,9 @@ import e3dPrinting from'../assets/3DPrinting.png'
 import logoGoogleMaps from '../assets/location1.png';
 import logoGitHub from '../assets/Octocat.png';
 
-export default class About extends Component {
+//import MyMapGoogle from '../HigherOtherComponent/MyMapGoogle'
+
+ class About extends Component {
   render() {
     return (
       <div>
@@ -16,10 +18,10 @@ export default class About extends Component {
       <div className="col s12 m12 l6">
       <div className="card z-depth-3">
       <img className="logoCard" src={mePhoto} alt="Grzegorz Photo"/>
-      <div className="card-title card-titleAbout">Grzegorz K******a</div>
+      <div className="card-title card-titleAbout">Grzegorz Kędziora</div>
       <div className="card-container card-containerAbout">    
     
-     <div><p>g***********m</p></div>
+     <div><p>ge.kedziora@gmail.com</p></div>
       </div>
       </div>
       <div className="card z-depth-3">
@@ -44,11 +46,12 @@ export default class About extends Component {
      
       
       </div>
-      <div className="col s12 m12 l6">
+      <div className="col s12 m12 l6 push-l1">
  <div className="card z-depth-3">
       <div className="card-title card-titleAbout">Location</div>
       <div className="card-container card-containerAbout">
-      <div className="mapGoogle">mapa googla</div>    
+      <div className="mapGoogle">mapa googla</div>
+          
        <img className="logoCard" src={logoGoogleMaps} alt="logoGoogleMaps"/>
      
       {// TODO: add google maps
@@ -73,3 +76,4 @@ export default class About extends Component {
     )
   }
 }
+export default About;
