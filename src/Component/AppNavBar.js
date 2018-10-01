@@ -40,7 +40,7 @@ class AppNavBar extends Component {
     return (
       <nav className="nav-wrapper blue">
         <div className="container">
-          <a className="brand-logo left">Gelo</a>
+          <a className="brand-logo left">Portfolio</a>
           <ul className="right hide-on-small-only">
             <li>
               <NavLink to="/">Home</NavLink>
