@@ -92,7 +92,7 @@ export default class About extends Component {
                     />
                     <div
                       style={{
-                        height: '76vh',
+                        height: '59vh',
                         width: '100%',
                         paddingTop: '15px',
                         paddingLeft: '15px',
