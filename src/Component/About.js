@@ -57,7 +57,7 @@ export default class About extends Component {
                   <div className="card-title card-titleAbout">Knowledge</div>
                   <div className="card-container card-containerAbout">
                     <p>Lublin Uniwesyty of Technology</p>
-                    <p>Informatics</p>
+                    <p>Computer Science</p>
                     <p>Engineer</p>
                     <p>2015-2019</p>
                   </div>
