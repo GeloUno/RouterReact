@@ -4,6 +4,7 @@ import AppNavBar from "../src/Component/AppNavBar";
 import About from "../src/Component/About";
 import Posts from './Component/Posts'
 import Post from './Component/Post'
+import Projects from './Component/Projects'
 import Contact from "../src/Component/Contact";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import MyMapGoogle from '../src/HigherOtherComponent/MyMapGoogle'
@@ -22,6 +23,7 @@ class App extends Component {
          */}
           <Route path="/about" component={About} />
           <Route path='/posts' component={Posts} />
+          <Route path='/Projects' component={Projects} />
           <Route path='/post/:post_id' component={Post} />
           <Route path="/contact" component={Contact} />
         </div>

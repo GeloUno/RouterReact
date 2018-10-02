@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import './Post.css'
 import axio from "axios";
 import {Link} from 'react-router-dom'
+import logoAngular from '../assets/Angular_full_color_logo.svg.png'
 
 class Posts extends Component {
   pages; 
@@ -41,7 +42,8 @@ class Posts extends Component {
     return (
       <div>
         <div className="container">
-          <div className="center">{postList}</div>
+
+            <div className="center">{postList}</div>
         </div>
       </div>
     );

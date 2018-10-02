@@ -46,7 +46,7 @@ class AppNavBar extends Component {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/posts">Projects</NavLink>
+              <NavLink to="/Projects">Projects</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>
