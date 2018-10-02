@@ -20,6 +20,7 @@ class Projects extends Component {
                     src={logoReact}
                     style={{
                       width: '70px',
+                      
                       height: '50px',
                       position: 'aboslut',
                       top: '-100%',
